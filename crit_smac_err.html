@@ -8,35 +8,69 @@ iframe {
     position: absolute;
     top: 0;
     left: 0;
+    border: 0;
 }
 img {
     position: absolute;
     left: 0px;
     top: 0px;
     z-index: 99;
+    cursor: move;
 	}
   html, body {
     margin: 0; height: 100%; overflow: hidden
   }
 
 </style>
-<title>CRITICAL ERROR: FINDER HAS RAN OPUT OF RAM | SchoolLoop Login</title>
-<!-- Movable image idea from @sreehari, code from https://stackoverflow.com/questions/1019873/jquery-drag-image#1020015, smac0S error originally made on https://aansari.tk -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+<title>CRITICAL ERROR: FINDER HAS RUN OUT OF RAM | SchoolLoop Login</title>
+<!-- Movable image idea from @sreehari; code from stackoverflow , w3scools and w3c (as per most of my pages); smac0S error originally made on https://aansari.tk -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 <script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-ui.min.css/"></script>
+
+<!-- favicons genned by realfavicongenerator -->
+<link rel="apple-touch-icon" sizes="180x180" href="./images/crit_smac_err-favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/crit_smac_err-favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./images/crit_smac_err-favicons/favicon-16x16.png">
+<link rel="manifest" href="./images/crit_smac_err-favicons/site.webmanifest">
+<link rel="mask-icon" href="./images/crit_smac_err-favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="./images/crit_smac_err-favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-config" content="./images/crit_smac_err-favicons/browserconfig.xml">
+<meta name="theme-color" content="#11b89a">
+
+<meta charset="utf-8"
+
 </head>
 <body onload="iframeEdit()">
 
-<img id="draggable" id="draggable" src="https://sreehax.github.io/lolz.png" width="550" />
+<noscript>
+<div style="background-color:red; width: 75%; margin-left: auto; margin-right: auto; ">
+  <style>
+  img {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 99;
+      margin-top: 75px;
+  	}
+    </style>
+  <h1 style="color:white; text-align:center">PLEASE ENABLE JAVASCRIPT IN ORDER TO GET THE FULL EXPERIENCE</h1>
+</div>
+</noscript>
+
+<!-- https://sreehax.github.io/lolz.png has wrong grammar -->
+<img src="./images/smac_err_msg.png" width="550" alt="Finder has run out of RAM. Press OK to relaunch Finder, or wait five (5) seconds for an auto-reboot." />
 
 <script type="text/javascript">
 $(document).ready(function(){
-  $("#draggable").draggable();
+  $("img").draggable();
 });
 </script>
 
-<iframe src="https://wrms.schoolloop.com/portal/login" frameBorder="0" >You need a modern browser to view iframes.</iframe>
+<iframe src="https://wrms.schoolloop.com/portal/login"></iframe>
+
+<!-- Need to fix grammar of audio and make it work in opera-->
  <audio autoplay loop>
   <source src="./sounds/CRITICAL_ERROR_SMAC.m4a" type="audio/mpeg">
   You need a modern browser to hear the audio element.
