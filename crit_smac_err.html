@@ -21,6 +21,14 @@ img {
     margin: 0; height: 100%; overflow: hidden
   }
 
+  .no-audio .box {
+    color: red;
+  }
+
+.audio .box {
+  color: green;
+}
+
 </style>
 <title>CRITICAL ERROR: FINDER HAS RUN OUT OF RAM | SchoolLoop Login</title>
 <!-- Movable image idea from @sreehari; code from stackoverflow , w3scools and w3c (as per most of my pages); smac0S error originally made on https://aansari.tk -->
@@ -39,7 +47,17 @@ img {
 <meta name="msapplication-config" content="./images/crit_smac_err-favicons/browserconfig.xml">
 <meta name="theme-color" content="#11b89a">
 
-<meta charset="utf-8"
+<meta charset="utf-8">
+
+<!-- Modernizr Feature Detection import -->
+<!--
+<script src="external-js/modernizr-custom.js"></script>
+-->
+
+<!-- code from https://stackoverflow.com/questions/34734100/how-to-use-html5shiv-correctly-how-work-on-ie-9-firefox-safari#34734168, shiv is from https://github.com/afarkas/html5shiv -->
+<!--[if lt IE 9]>
+    <script src="html5shiv/dist/html5shiv.js"></script>
+<![endif]-->
 
 </head>
 <body onload="iframeEdit()">
@@ -75,5 +93,60 @@ $(document).ready(function(){
   <source src="./sounds/CRITICAL_ERROR_SMAC.m4a" type="audio/mpeg">
   You need a modern browser to hear the audio element.
 </audio>
+
+<!-- Detects HTML5 <audio> element -->
+<!-- Wait what, my Modernizr script makes no sense
+<script type="text/javascript">
+if (Modernizr.audio) {
+
+// looped js audio code from some thread on stackoverflow
+myAudio = new Audio('sounds/CRITICAL_ERROR_SMAC.ogg');
+if (typeof myAudio.loop == 'boolean')
+{
+    myAudio.loop = true;
+}
+else
+{
+    myAudio.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
+myAudio.play();
+
+} else {
+
+  ducument.write(" Your browser does not support the <audio> element. ")
+
+}
+</script>
+-->
+
+<!--
+<script type="text/javascript">
+
+var song = new Audio("./sounds/CRITICAL_ERROR_SMAC.ogg");
+song.loop = true;
+document.body.appendChild(song);​
+
+</script>
+-->
+
+<!-- Why 'aint the alert vorking??? iVill not known.
+
+<script type="text/javascript">
+
+if (Modernizr.audio) {
+  // supported
+  alert("The HTML5 <audio> element is supported, but may not play due to some limitations set by the developer.");
+} else {
+  // not-supported
+  alert("Your browser does not support the HTML5 <audio> element.");
+}
+
+</script>
+
+-->
+
 </body>
 </html>
